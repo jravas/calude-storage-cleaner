@@ -4,9 +4,9 @@
 cask "claude-storage-cleaner" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.1.0"
-  sha256 arm:   "f3220935baf4ef83586dbab4f8d96a4ade5a7d434b41dd793a4f6f3a20834793",
-         intel: "eec40aab8f257baae59db13bc4385995477f9620523692685234f8b8a7b9a604"
+  version "0.1.1"
+  sha256 arm:   "d250b6fbe41f77c8881b6d1a6d490138adf0c14305789c034fbd1ab98693d5e9",
+         intel: "868d2baa21a5371369cd870bc9fa78e6b4a3515500b899007f8f2cd17658323b"
 
   url "https://github.com/jravas/calude-storage-cleaner/releases/download/v#{version}/Claude.Storage.Cleaner_#{version}_#{arch}.dmg"
   name "Claude Storage Cleaner"
