@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Claude Storage Cleaner</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="drag" data-tauri-drag-region></div>
+      <nav class="nav" id="nav">
+        <a class="nav-item" data-view="overview">Overview</a>
+        <a class="nav-item" data-view="claude">Claude data</a>
+        <div class="nav-section">Projects</div>
+        <div id="repo-list"></div>
+      </nav>
+      <div class="sidebar-foot">
+        <button id="rescan" class="btn">Rescan</button>
+        <span id="scanned-at" class="muted"></span>
+      </div>
+    </aside>
+
+    <main class="content">
+      <header class="toolbar" data-tauri-drag-region>
+        <h1 id="view-title">Overview</h1>
+        <span id="toolbar-note" class="muted"></span>
+        <div id="progress" class="progress" hidden></div>
+      </header>
+      <div class="body">
+        <section id="view" class="view"></section>
+        <aside id="detail" class="detail" hidden></aside>
+      </div>
+    </main>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
