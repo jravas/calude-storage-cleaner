@@ -8,9 +8,9 @@ losing work.
 The Claude desktop app gives every coding session its own git worktree under
 `<repo>/.claude/worktrees/`. Each worktree re-materialises `.terraform`,
 `node_modules`, `target`, `.next` and friends, and nothing removes them when
-the session is archived. On the machine this was written on, that was 111 GB
-across 90 worktrees, with one worktree alone holding 32 GB of Terraform
-providers. The write-up is in [docs/storage-research.md](docs/storage-research.md).
+the session is archived. On the machine this was written on, that added up to
+over 100 GB across about 90 worktrees, with a single worktree holding 32 GB of
+Terraform providers.
 
 Claude Storage Cleaner lists every project, worktree and session with real
 on-disk sizes and a conservative safety state, then offers three actions:
