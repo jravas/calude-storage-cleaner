@@ -6,6 +6,18 @@ All notable changes to this project are documented here. The format follows
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-10-06
+
+### Fixed
+
+- Release bundles are now ad-hoc signed as a whole, so the app bundle verifies
+  with `codesign` instead of carrying a binary-only signature.
+- Release workflow no longer fails when the Apple signing secrets are absent.
+
+### Changed
+
+- Install instructions reflect Homebrew 5, which removed `--no-quarantine`.
+
 ## [0.1.0] - 2026-10-06
 
 ### Added
@@ -22,5 +34,6 @@ All notable changes to this project are documented here. The format follows
   and action sheet. Light and dark follow the system.
 - Action log at `~/Library/Logs/cleaner-app/actions.log`.
 
-[Unreleased]: https://github.com/jravas/calude-storage-cleaner/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/jravas/calude-storage-cleaner/compare/v0.1.1...HEAD
+[0.1.1]: https://github.com/jravas/calude-storage-cleaner/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/jravas/calude-storage-cleaner/releases/tag/v0.1.0

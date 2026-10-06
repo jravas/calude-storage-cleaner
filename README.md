@@ -28,25 +28,31 @@ silently.
 
 ## Install
 
+The app is not signed with an Apple Developer ID yet, so whichever way you
+install it, macOS will refuse to open it until the quarantine flag is cleared.
+One command does that; it is included in each path below. Homebrew removed its
+`--no-quarantine` flag in version 5, so it can no longer do this for you.
+
 ### Homebrew (recommended)
 
 ```bash
 brew tap jravas/tap
-brew install --cask --no-quarantine claude-storage-cleaner
+brew install --cask claude-storage-cleaner
+xattr -dr com.apple.quarantine "/Applications/Claude Storage Cleaner.app"
 ```
 
-`--no-quarantine` matters: the app is not signed with an Apple Developer ID
-yet, and without the flag macOS refuses to open it (see below). The cask
-definition lives in [homebrew/Casks](homebrew/Casks/claude-storage-cleaner.rb).
+Upgrades are `brew upgrade --cask claude-storage-cleaner` followed by the same
+`xattr` line. The cask definition lives in
+[homebrew/Casks](homebrew/Casks/claude-storage-cleaner.rb).
 
 ### Download the DMG
 
 Grab the `.dmg` for your chip from the
 [releases page](https://github.com/jravas/calude-storage-cleaner/releases),
-drag the app to Applications, then clear the quarantine flag once:
+drag the app to Applications, then clear the flag once:
 
 ```bash
-xattr -d com.apple.quarantine "/Applications/Claude Storage Cleaner.app"
+xattr -dr com.apple.quarantine "/Applications/Claude Storage Cleaner.app"
 ```
 
 Without that step, macOS 15 and later shows "Apple could not verify this app"
@@ -72,8 +78,8 @@ Requires Rust stable and Xcode command line tools. There is no Node toolchain.
 Signing and notarization need an Apple Developer Program membership. The
 release workflow already supports it: set the `APPLE_*` repository secrets
 listed in [.github/workflows/release.yml](.github/workflows/release.yml) and
-tagged builds come out signed and notarized, with no quarantine workaround
-needed.
+tagged builds come out signed and notarized, with no quarantine step for
+anyone. Until then, releases are ad-hoc signed.
 
 ## Using the app
 
