@@ -34,6 +34,6 @@ All notable changes to this project are documented here. The format follows
   and action sheet. Light and dark follow the system.
 - Action log at `~/Library/Logs/cleaner-app/actions.log`.
 
-[Unreleased]: https://github.com/jravas/calude-storage-cleaner/compare/v0.1.1...HEAD
-[0.1.1]: https://github.com/jravas/calude-storage-cleaner/compare/v0.1.0...v0.1.1
-[0.1.0]: https://github.com/jravas/calude-storage-cleaner/releases/tag/v0.1.0
+[Unreleased]: https://github.com/jravas/claude-storage-cleaner/compare/v0.1.1...HEAD
+[0.1.1]: https://github.com/jravas/claude-storage-cleaner/compare/v0.1.0...v0.1.1
+[0.1.0]: https://github.com/jravas/claude-storage-cleaner/releases/tag/v0.1.0

@@ -48,7 +48,7 @@ Upgrades are `brew upgrade --cask claude-storage-cleaner` followed by the same
 ### Download the DMG
 
 Grab the `.dmg` for your chip from the
-[releases page](https://github.com/jravas/calude-storage-cleaner/releases),
+[releases page](https://github.com/jravas/claude-storage-cleaner/releases),
 drag the app to Applications, then clear the flag once:
 
 ```bash
@@ -64,8 +64,8 @@ and offers no way through from the dialog. The alternative is System Settings
 Apps built locally are never quarantined.
 
 ```bash
-git clone https://github.com/jravas/calude-storage-cleaner.git
-cd calude-storage-cleaner
+git clone https://github.com/jravas/claude-storage-cleaner.git
+cd claude-storage-cleaner
 cargo install tauri-cli --version '^2' --locked
 cd crates/app && cargo tauri build
 open ../../target/release/bundle/macos/Claude\ Storage\ Cleaner.app
